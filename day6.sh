@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --partition=base
 #SBATCH --time=1:30:00
 #SBATCH --reservation=biol217
@@ -100,7 +100,7 @@ export MAMBA_ROOT_PREFIX=$WORK/.micromamba
 #quast.py assembly.fasta --circos -L --conserved-genes-finding --rna-finding \
  #--glimmer --use-all-alignments --report-all-metrics -o quast -t 8
 
-micromamba deactivate
+#micromamba deactivate
 
 #4.2. CheckM
 #micromamba env list
@@ -113,7 +113,7 @@ micromamba deactivate
 #checkm tree_qa checkm_out
 #checkm qa checkm_out/lineage.ms checkm_out -o 1 > checkm_out/Final_table_01.csv
 #checkm qa checkm_out/lineage.ms checkm_out/ -o 2 > checkm_out/Final_table_checkm.csv
-micromamba deactivate
+#micromamba deactivate
 
 
 # tree_qa: assess phylogenetic markers found in each bin
